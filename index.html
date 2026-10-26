@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>PRISM 일정</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="spectrum" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="PRISM 일정">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 18.5 17h-17Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 9.5 18.5 17" stroke="#2b6bff" stroke-width="1.6"/><path d="M10 9.5 14.5 17" stroke="#19d36b" stroke-width="1.6"/><path d="M10 9.5 10.5 17" stroke="#ff2d3d" stroke-width="1.6"/></svg>
+        PRISM
+      </a>
+      <nav class="nav">
+        <a href="./" aria-current="page">일정</a>
+        <a href="links.html">전달파일</a>
+      </nav>
+      <span class="updated" id="updated"></span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="section-head"><h2>다가오는 일정</h2></div>
+    <section class="upcoming" id="upcoming" aria-label="다가오는 일정"></section>
+
+    <div class="toolbar">
+      <div class="seg" role="tablist" aria-label="보기 방식">
+        <button role="tab" data-view="timeline">타임라인</button>
+        <button role="tab" data-view="month">월간</button>
+        <button role="tab" data-view="list">목록</button>
+      </div>
+      <div class="filters" id="filters" aria-label="작업자 필터"></div>
+    </div>
+    <section id="view" aria-live="polite"></section>
+    <div class="legend" id="legend"></div>
+  </main>
+
+  <footer class="wrap">내부 공유용 · 일정 변경은 PM에게 알려 주세요.</footer>
+  <div class="detail" id="detail" role="dialog" aria-label="일정 상세" hidden></div>
+
+  <script src="data/team.js"></script>
+  <script src="data/schedule.js"></script>
+  <script src="assets/schedule.js"></script>
+</body>
+</html>

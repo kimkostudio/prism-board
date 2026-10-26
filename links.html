@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>PRISM 전달파일</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="spectrum" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="PRISM 일정">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 18.5 17h-17Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 9.5 18.5 17" stroke="#2b6bff" stroke-width="1.6"/><path d="M10 9.5 14.5 17" stroke="#19d36b" stroke-width="1.6"/><path d="M10 9.5 10.5 17" stroke="#ff2d3d" stroke-width="1.6"/></svg>
+        PRISM
+      </a>
+      <nav class="nav">
+        <a href="./">일정</a>
+        <a href="links.html" aria-current="page">전달파일</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>전달파일 올리기</h1>
+        <p>작업 파일은 각자 구글 드라이브 폴더에 올리고, 링크를 전달 시트에 한 줄로 남겨 주세요. 검토 상태와 피드백도 같은 줄에서 확인합니다.</p>
+      </div>
+      <a class="cta" id="sheet-cta" href="#" target="_blank" rel="noopener">전달 시트 열기 <small>Google Sheets ↗</small></a>
+    </section>
+
+    <section class="steps" aria-label="올리는 순서">
+      <div class="step">
+        <div class="no">01</div>
+        <h3>드라이브 폴더에 업로드</h3>
+        <p>아래 내 폴더에 파일 이름 규칙대로 올립니다. 시퀀스(EXR 등)는 폴더째 또는 zip으로 묶어 주세요.</p>
+      </div>
+      <div class="step">
+        <div class="no">02</div>
+        <h3>링크 복사</h3>
+        <p>파일(또는 폴더) 우클릭 → 공유 → <b>링크 복사</b>.</p>
+        <p>'링크가 있는 모든 사용자' 공개는 쓰지 않습니다. 폴더를 팀과 공유해 두면 따로 설정할 필요가 없습니다.</p>
+      </div>
+      <div class="step">
+        <div class="no">03</div>
+        <h3>시트에 한 줄 추가</h3>
+        <p>전달 시트 맨 아래에 새 줄을 추가하고, 작업자·상태는 목록에서 고릅니다. 새 버전은 기존 줄을 고치지 말고 <b>새 줄</b>로 올립니다.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="section-head"><h2>파일 이름 규칙</h2><span class="sub">영문 소문자 · 공백 대신 밑줄</span></div>
+      <div class="naming">
+        <div class="pattern" aria-label="샷_작업_이니셜_v버전.확장자">
+          <span class="seg-p" style="--c:var(--k-review)"><code>sq04_c025</code><small>샷</small></span><span class="sepc">_</span>
+          <span class="seg-p" style="--c:var(--k-meeting)"><code>fx</code><small>작업</small></span><span class="sepc">_</span>
+          <span class="seg-p" style="--c:var(--k-qc)"><code>lsh</code><small>이니셜</small></span><span class="sepc">_</span>
+          <span class="seg-p" style="--c:var(--k-feedback)"><code>v001</code><small>버전 3자리</small></span>
+          <span class="sepc">.mp4</span>
+        </div>
+        <div class="examples">
+          <div><code>sq04_c025_fx_lsh_v001.mp4</code><span>FX 프리뷰 1차</span></div>
+          <div><code>sq05_c038_env_ljy_v003.png</code><span>환경 스틸 3차</span></div>
+          <div><code>sq04_c032_lkd_jsh_v002/</code><span>EXR 시퀀스는 폴더 이름에 규칙 적용</span></div>
+        </div>
+        <div class="codes" aria-label="작업 코드">
+          <span><code>fx</code>FX·시뮬레이션</span>
+          <span><code>env</code>환경</span>
+          <span><code>lkd</code>룩뎁·셰이딩</span>
+          <span><code>lgt</code>라이팅</span>
+          <span><code>rnd</code>렌더</span>
+          <span><code>cmp</code>합성</span>
+          <span><code>lay</code>레이아웃·카메라</span>
+          <span><code>sf</code>스타일프레임</span>
+        </div>
+        <p class="hint">샷 번호(sq·c)는 콘티 확정 전 임시 번호입니다. 확정되면 이 페이지에 공지합니다.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="section-head"><h2>작업자별 드라이브 폴더</h2><span class="sub">이니셜 = 파일 이름에 쓰는 코드</span></div>
+      <div class="people" id="people"></div>
+    </section>
+
+    <section class="block">
+      <div class="section-head"><h2>시트 항목</h2><span class="sub">한 줄 = 한 번의 전달</span></div>
+      <table class="cols">
+        <thead><tr><th>항목</th><th>쓰는 법</th><th class="hide-sm">예시</th></tr></thead>
+        <tbody>
+          <tr><td>등록일</td><td>올린 날짜</td><td class="ex hide-sm">2026-11-10</td></tr>
+          <tr><td>작업자</td><td>목록에서 선택</td><td class="ex hide-sm">이수형</td></tr>
+          <tr><td>샷/작업 단위</td><td>샷 번호 또는 작업 단위 이름</td><td class="ex hide-sm">sq04_c025</td></tr>
+          <tr><td>작업 내용</td><td>무엇을 올렸는지 짧게</td><td class="ex hide-sm">FX 테스트 1차</td></tr>
+          <tr><td>버전</td><td>파일 이름의 버전과 같게</td><td class="ex hide-sm">v001</td></tr>
+          <tr><td>파일 종류</td><td>목록에서 선택 (프리뷰 MP4·스틸 이미지·EXR 시퀀스·캐시·씬 파일·기타)</td><td class="ex hide-sm">프리뷰 MP4</td></tr>
+          <tr><td>드라이브 링크</td><td>02단계에서 복사한 링크</td><td class="ex hide-sm">https://drive.google.com/…</td></tr>
+          <tr><td>상태</td><td>올릴 때는 <b>검토 대기</b>. 이후 PM이 바꿉니다</td><td class="ex hide-sm">검토 대기</td></tr>
+          <tr><td>작업자 메모</td><td>확인할 점, 알려진 문제</td><td class="ex hide-sm">물방울 아직 없음</td></tr>
+          <tr><td>PM 피드백</td><td>PM이 작성</td><td class="ex hide-sm">—</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="block">
+      <div class="section-head"><h2>상태</h2></div>
+      <div class="status-flow">
+        <div class="st-card"><span class="tag" style="--c:var(--k-feedback)">검토 대기</span><p>올렸고 PM 확인 전</p></div>
+        <div class="st-card"><span class="tag" style="--c:var(--k-delivery)">수정 요청</span><p>PM 피드백 반영 필요 → 새 버전으로 다시 올림</p></div>
+        <div class="st-card"><span class="tag" style="--c:var(--k-meeting)">승인</span><p>이 버전으로 진행</p></div>
+        <div class="st-card"><span class="tag" style="--c:var(--k-review)">최종 전달</span><p>최종본으로 확정</p></div>
+        <div class="st-card"><span class="tag st">보류</span><p>잠시 중단·대기</p></div>
+      </div>
+    </section>
+
+    <div class="callout"><b>공유 주의</b> — 이 페이지와 일정 보드는 주소만 알면 열립니다. 클라이언트 자료·이미지는 여기 올리지 말고 드라이브 폴더와 시트에만 둡니다.</div>
+  </main>
+
+  <footer class="wrap" style="padding-top:28px">내부 공유용 · 시트 접근 권한이 없으면 PM에게 요청하세요.</footer>
+
+  <script src="data/team.js"></script>
+  <script src="assets/links.js"></script>
+</body>
+</html>
