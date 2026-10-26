@@ -290,14 +290,14 @@ footer.wrap { padding-bottom: 40px; color: var(--ink-3); font-size: 12px; }
 .block > .section-head { margin-bottom: 14px; }
 
 .naming { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px; }
-.pattern { font-family: var(--mono); font-size: clamp(14px, 2.2vw, 19px); display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px; overflow-wrap: anywhere; }
+.pattern { font-family: var(--font); font-weight: 600; font-size: clamp(16px, 2.4vw, 21px); display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px; overflow-wrap: anywhere; }
 .pattern .seg-p { display: inline-flex; flex-direction: column; align-items: flex-start; }
 .pattern .seg-p code { padding: 3px 7px; border-radius: 5px; background: color-mix(in srgb, var(--c) 13%, transparent); color: var(--ink); font-family: inherit; }
 .pattern .seg-p small { font-family: var(--font); font-size: 11.5px; color: var(--ink-3); padding: 4px 2px 0; }
 .pattern .sepc { color: var(--ink-3); padding: 3px 0; }
 .examples { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); display: grid; gap: 6px; }
 .examples div { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); }
-.examples code { font-family: var(--mono); color: var(--ink); font-size: 13px; }
+.examples code { font-family: var(--font); font-weight: 600; color: var(--ink); font-size: 13.5px; min-width: 130px; }
 .codes { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px 16px; font-size: 13px; color: var(--ink-2); }
 .codes code { font-family: var(--mono); color: var(--ink); margin-right: 6px; }
 .hint { margin-top: 12px; font-size: 12.5px; color: var(--ink-3); }
@@ -317,7 +317,7 @@ table.cols { width: 100%; border-collapse: collapse; background: var(--surface);
 table.cols th, table.cols td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
 table.cols th { background: var(--surface-2); font-size: 12px; color: var(--ink-3); font-weight: 600; }
 table.cols td:first-child { font-weight: 600; white-space: nowrap; }
-table.cols td.ex { font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); overflow-wrap: anywhere; }
+table.cols td.ex { font-size: 13px; color: var(--ink-2); overflow-wrap: anywhere; }
 table.cols tr:last-child td { border-bottom: 0; }
 
 .status-flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; }

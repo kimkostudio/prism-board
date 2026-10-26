@@ -12,7 +12,7 @@
     const url = safeUrl(p.driveFolder);
     return `<div class="person">
       <span class="av" style="--c:${esc(p.color)}">${esc(p.name.slice(-2))}</span>
-      <span class="who"><b>${esc(p.name)}</b><code>${esc(p.id)}</code></span>
+      <span class="who"><b>${esc(p.name)}</b></span>
       ${url ? `<a class="go" href="${esc(url)}" target="_blank" rel="noopener">폴더 열기 ↗</a>` : '<span class="go">폴더 준비 중</span>'}
     </div>`;
   }).join('');
