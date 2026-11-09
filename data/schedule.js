@@ -19,7 +19,7 @@ window.SCHEDULE = {
     { date: '2026-11-03', title: '클라이언트 PPM', kind: 'meeting', status: 'done' },
     { date: '2026-11-04', title: '클라이언트 FB · 발주', kind: 'feedback', status: 'done' },
     { date: '2026-11-09', title: '에이전시 PD 미팅', kind: 'meeting', status: 'done' },
-    { date: '2026-11-11', title: '스타일프레임 전달 (에이전시 검토)', kind: 'review', status: 'confirmed', note: '15시 목표 · 스틸 1장을 5초 HDR 영상(MP4)으로 · HDR 색 작업 전 상태로 전달' },
+    { date: '2026-11-11', title: '스타일프레임 전달 (에이전시 검토)', kind: 'review', status: 'confirmed', note: '15시 목표 · 스틸 2장, 각각 5초 HDR 영상(MP4)으로 · HDR 색 작업 전 상태로 전달' },
     { date: '2026-11-12', title: '클라이언트 실무 전달 · FB', kind: 'feedback', status: 'confirmed' },
     { date: '2026-11-13', title: '스틸컷 클라이언트 보고', kind: 'review', status: 'confirmed' },
     { date: '2026-12-03', title: '1차 애니메틱', kind: 'review', status: 'tentative', note: '그레이스케일 + 일부 FHD 컬러' },
