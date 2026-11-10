@@ -8,7 +8,7 @@
   <title>PRISM 자료실</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=5">
 </head>
 <body>
   <div class="spectrum" aria-hidden="true"></div>
@@ -30,41 +30,53 @@
     <section class="hero">
       <div>
         <h1>자료실</h1>
-        <p>팀 공용 드라이브 폴더를 그대로 보여 줍니다. 폴더에 올리면 이 화면에도 바로 나타납니다. 하위 폴더나 파일을 누르면 드라이브가 새 탭으로 열립니다.</p>
+        <p>팀 공용 드라이브 폴더입니다. 드라이브에 올리면 여기서 바로 보이고, 이미지는 눌러서 크게 봅니다.</p>
       </div>
       <a class="cta" id="open-drive" href="#" target="_blank" rel="noopener noreferrer" hidden>드라이브에서 열기 <small>Google Drive ↗</small></a>
     </section>
 
     <section id="browser" hidden>
+      <nav class="crumbs" id="crumbs" aria-label="폴더 경로"></nav>
       <div class="toolbar">
-        <div class="seg" role="tablist" aria-label="보기 방식">
+        <div class="seg" id="mode-seg" role="tablist" aria-label="보기 방식">
           <button role="tab" data-mode="grid">격자</button>
           <button role="tab" data-mode="list">목록</button>
         </div>
+        <div class="seg" id="sort-seg" role="tablist" aria-label="정렬">
+          <button role="tab" data-sort="new">최신순</button>
+          <button role="tab" data-sort="name">이름순</button>
+        </div>
         <div class="mat-actions">
+          <span class="mat-stamp" id="stamp"></span>
           <button class="ghost" id="reload" type="button">새로고침</button>
           <button class="ghost" id="copy" type="button">공유 링크 복사</button>
         </div>
       </div>
-      <div class="mat-frame" id="frame"></div>
-      <p class="hint mat-hint">목록이 안 보이면 드라이브에서 열기를 눌러 주세요. 하위 폴더 안은 드라이브에서 봅니다.</p>
+      <div id="listing" aria-live="polite"></div>
     </section>
 
-    <section class="mat-empty" id="empty" hidden>
+    <section class="mat-empty" id="setup" hidden>
       <h2>자료실 링크가 필요합니다</h2>
-      <p>PM에게 받은 자료실 주소로 한 번 열면 이 브라우저에 기억됩니다. 또는 드라이브 폴더 링크를 붙여 넣으세요.</p>
+      <p>PM에게 받은 자료실 주소로 한 번 열면 이 브라우저에 기억됩니다. 또는 받은 링크를 붙여 넣으세요.</p>
       <form id="set-form" class="mat-form">
-        <input id="set-input" type="text" inputmode="url" autocomplete="off" placeholder="https://drive.google.com/drive/folders/…" aria-label="드라이브 폴더 링크">
+        <input id="set-input" type="text" inputmode="url" autocomplete="off" placeholder="자료실 주소 또는 드라이브 폴더 링크" aria-label="자료실 주소">
         <button class="cta" type="submit">열기</button>
       </form>
-      <p class="mat-err" id="set-err" hidden>드라이브 폴더 링크를 확인해 주세요.</p>
+      <p class="mat-err" id="set-err" hidden>링크를 확인해 주세요.</p>
     </section>
 
-    <div class="callout" style="margin-top:28px"><b>공유 주의</b> — 이 사이트 주소는 공개입니다. 자료실 주소(끝에 <code>#f=</code>가 붙은 링크)는 팀 안에서만 전달하고, 공개 채널에 올리지 않습니다.</div>
+    <div class="callout" style="margin-top:28px"><b>공유 주의</b> — 이 사이트 주소는 공개입니다. 자료실 주소(끝에 <code>#</code> 뒤가 붙은 링크)는 팀 안에서만 전달하고, 공개 채널에 올리지 않습니다.</div>
   </main>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="이미지 보기" hidden>
+    <button class="lb-x" id="lb-x" type="button" aria-label="닫기">×</button>
+    <button class="lb-nav prev" id="lb-prev" type="button" aria-label="이전">‹</button>
+    <figure><img id="lb-img" alt=""><figcaption><span id="lb-name"></span><a id="lb-open" target="_blank" rel="noopener noreferrer">드라이브에서 열기 ↗</a></figcaption></figure>
+    <button class="lb-nav next" id="lb-next" type="button" aria-label="다음">›</button>
+  </div>
 
   <footer class="wrap" style="padding-top:28px">내부 공유용 · 자료 정리·접근 문의는 PM에게.</footer>
 
-  <script src="assets/materials.js?v=1"></script>
+  <script src="assets/materials.js?v=3"></script>
 </body>
 </html>
